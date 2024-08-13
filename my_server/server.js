@@ -7,12 +7,12 @@ const connectMongodb = require('./config/db')
 
 dotenv.config()
 
-console.log('MongoDB Connection URL:', process.env.CONNECTION_URL);
 
 connectMongodb();
 
 app.use(express.json());
-app.use('/', router)
+
+app.use('/api', router)
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 })
