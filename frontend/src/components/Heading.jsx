@@ -14,7 +14,7 @@ const Heading = () => {
     <>
     <h1 className="chefdomain">CHEF DOMAIN</h1>
     <header>
-      <h1 className="chefdomain">CHEF DOMAIN</h1>
+    
       <nav>
         <ul>
           <li>

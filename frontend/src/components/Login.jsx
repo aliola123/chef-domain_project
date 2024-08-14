@@ -29,7 +29,7 @@ const Login = () => {
           />
           <label htmlFor="remember">Remember Me</label>
         </div>
-        <button type="submit" className="buttonStyle">Login</button>
+        <button type="submit" className="buttonStyle">Sign In</button>
       </form>
       <a href="/signup" className="signupLinkStyle">Create an account</a>
     </div>
