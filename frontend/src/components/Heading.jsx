@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Login from './Login';
-import './Header.css';
+import '../App.css/Header.css';
 
 const Heading = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -11,6 +11,8 @@ const Heading = () => {
   };
 
   return (
+    <>
+    <h1 className="chefdomain">CHEF DOMAIN</h1>
     <header>
       <h1 className="chefdomain">CHEF DOMAIN</h1>
       <nav>
@@ -39,7 +41,8 @@ const Heading = () => {
           </li>
         </ul>
       </nav>
-    </header>
+      </header>
+      </>
   );
 };
 
