@@ -14,7 +14,7 @@ router.put('/products/:id', productController.updateProduct)
 router.delete('/products/:id', productController.deleteProduct)
 
 //AUTH ROUTES
-router.post('/signup', signUp); 
+router.post('/signup',hashPassword, signUp); 
 router.post('/signin', signIn); 
 
 

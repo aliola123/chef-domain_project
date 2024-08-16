@@ -1,12 +1,13 @@
 const User = require('../models/user');
 const jwt = require('jsonwebtoken');
-
+const comparePassword = require('../utils/comparePassword');
+const { use } = require('../routes/routes');
 
 // Sign Up
 const signUp = async (req, res, next) => {
-    console.log("POST /api/signup called");
+   
     try {
-        const {email, password } = req.body;
+        const {name,email, password , phone, address,role} = req.body;// The signup was not working cuz the required fields were not parsed or handled
 
         const existingUser = await User.findOne({email});
         if (existingUser) {
@@ -14,7 +15,7 @@ const signUp = async (req, res, next) => {
         }
 
         // Create and save the user
-        const user = new User({email, password });
+        const user = new User({name, email, password, phone, address, role });
         await user.save();
 
         res.status(201).json({message: "User registered successfully!", user });
@@ -28,6 +29,10 @@ const signIn = async (req, res, next) => {
     console.log("POST /api/signin called");
     try {
         const {email, password } = req.body;
+        if (!email || !password) {
+            return res.status(400).json({ error: 'Email or password is missing' });
+        }
+        console.log('Received password:', password);
 
         // This code Checks if user exists
         const user = await User.findOne({email });
@@ -36,7 +41,7 @@ const signIn = async (req, res, next) => {
         }
 
         //For checking password against hashed one in db
-        const isMatch = await user.comparePassword(password);
+        const isMatch = await comparePassword(password, user.password);
         if (!isMatch) {
             return res.status(400).json({ error: "Invalid credentials" });
         }
@@ -45,7 +50,7 @@ const signIn = async (req, res, next) => {
         const token = jwt.sign({id: user._id }, 'your_jwt_secret_key', { expiresIn: '1h' });
 
         res.status(200).json({message: "Login successful!", token });
-    } 
+    }
     catch (error) {
         res.status(500).json({error: error.message });
     }
