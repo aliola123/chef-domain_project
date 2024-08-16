@@ -1,48 +1,28 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Login from './Login';
-import '../App.css/Header.css';
+import LoginButton from './LoginButton';
+import Cart from './Cart';
+import '../App.css/Common.css';
+import logo from '/images/chef-domain-logo.jpg';
 
 const Heading = () => {
-  const [showLogin, setShowLogin] = useState(false);
-
-  const toggleLogin = () => {
-    setShowLogin(!showLogin);
-  };
-
   return (
-    <>
-    <h1 className="chefdomain">CHEF DOMAIN</h1>
-    <header>
-    
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li>
-            <button onClick={toggleLogin}>
-              {showLogin ? 'Close Login' : 'Login'}
-            </button>
-            {showLogin && (
-              <div className="login-container">
-                <Login />
-              </div>
-            )}
-          </li>
-          <li>
-            <Link to="/cart">Cart</Link>
-          </li>
-        </ul>
-      </nav>
-      </header>
-      </>
+    <header className="header">
+      <div className="logo-container">
+        <img src={logo} alt="Chef Domain Logo" className="logo" />
+        <h1 className="chef-title">CHEF DOMAIN</h1>
+      </div>
+      <div className="navbar">
+        <nav className="nav-links">
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
+        </nav>
+        <div className="nav-right">
+          <LoginButton />
+          <Cart /> {/* Add the Cart component here */}
+        </div>
+      </div>
+    </header>
   );
 };
 

@@ -4,7 +4,7 @@ const Login = () => {
   return (
     <div className="containerStyle">
       <h2>Login</h2>
-      <img></img>
+
       <form action="/login" method="POST" className="formStyle">
         <input
           type="email"
