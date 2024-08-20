@@ -1,7 +1,6 @@
 const User = require('../models/user');
 const jwt = require('jsonwebtoken');
 const comparePassword = require('../utils/comparePassword');
-const { use } = require('../routes/routes');
 
 // Sign Up
 const signUp = async (req, res, next) => {
@@ -32,7 +31,7 @@ const signIn = async (req, res, next) => {
         if (!email || !password) {
             return res.status(400).json({ error: 'Email or password is missing' });
         }
-        console.log('Received password:', password);
+        
 
         // This code Checks if user exists
         const user = await User.findOne({email });

@@ -70,7 +70,39 @@ const deleteProduct = async (req, res, next)=>{
         res.status(500).json({error: error.message})
     }
 }
+
+const upload = async (req, res) => {
+    try {
+        // Check if files are uploaded
+        if (!req.files || req.files.length === 0) {
+            return res.status(400).json({ error: 'No file uploaded' });
+        }
+
+        const productId = req.params.id;
+        const product = await Product.findById(productId);
+
+        if (!product) {
+            return res.status(404).json({ error: 'Product not found' });
+        }
+
+        // Map the uploaded files to their file paths
+        const filePaths = req.files.map(file => `/uploads/${file.filename}`);
+
+        // Assuming the `image` field in the product model is an array
+        product.image = filePaths;
+
+        await product.save();
+
+        res.status(200).json({ message: 'Images uploaded successfully', product });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
+
+
+
+ 
 module.exports = {
-    createProduct, getProduct, getProducts, updateProduct, deleteProduct
+    createProduct, getProduct, getProducts, updateProduct, deleteProduct, upload
 }
 
