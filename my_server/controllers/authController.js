@@ -2,6 +2,8 @@ const User = require('../models/user');
 const jwt = require('jsonwebtoken');
 const comparePassword = require('../utils/comparePassword');
 const generateToken = require('../utils/generateToken');
+
+const hashPassword = require('../middleware/hashPassword');
 require('dotenv').config();
 // Sign Up
 const signUp = async (req, res, next) => {
@@ -56,7 +58,34 @@ const signIn = async (req, res, next) => {
     }
 }
 
+const changePassword = async (req, res, next)=>{
+    try{
+        const {oldPassword, newPassword} = req.body;
+    const {_id} = req.user;
+
+    const user = await User.findById(_id);
+    if(!user){
+        return res.status(404).json({error: "User not found"})
+    }
+    if(newPassword === user.password){
+        return res.status(400).json("This is the same as the old password")
+    }
+   const isMatch = await comparePassword(oldPassword, user.password);
+   if(!isMatch){
+    return res.status(400).json("Your old password is incorrect");
+   }
+   const hashed = await hashPassword(newPassword);
+   user.password = hashed;
+   await user.save();
+   res.status(200).json("Password Changed Successfully");
+    }
+    catch(error){
+        next(error)
+    }
+}
+
 module.exports = {
     signUp,
     signIn,
+    changePassword
 };

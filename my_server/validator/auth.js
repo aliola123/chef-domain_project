@@ -14,9 +14,13 @@ const signinValidator = [
 const emailValidator = [
     check("email").isEmail().withMessage("Invalid email").notEmpty().withMessage("Email is required")
 ];
-
+const passwordValidator = [
+    check('oldPassword').notEmpty().withMessage("Enter your old password"),
+    check('newPassword').notEmpty().withMessage('Enter the new password')
+]
 module.exports = {
     signupValidator,
     signinValidator,
-    emailValidator
+    emailValidator,
+    passwordValidator
 };

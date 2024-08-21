@@ -1,15 +1,12 @@
-const bcryptjs = require('bcryptjs');
+const bcrypt = require('bcryptjs');
 
-const hashPassword = async (req, res, next) => {
-    try {
-        if (req.body.password) {
-            const salt = await bcryptjs.genSalt(10);
-            req.body.password = await bcryptjs.hash(req.body.password, salt);
-        }
-        next();
-    } catch (error) {
-        res.status(500).json({ error: "Error hashing the password" });
-    }
-}
+const hashPassword = async (password) => {
+  try {
+    const salt = await bcrypt.genSalt(10);
+    return await bcrypt.hash(password, salt);
+  } catch (error) {
+    throw new Error('Error hashing the password');
+  }
+};
 
 module.exports = hashPassword;
