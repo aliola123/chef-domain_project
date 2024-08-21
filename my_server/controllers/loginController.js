@@ -1,7 +1,8 @@
 const User = require('../models/user');
 const jwt = require('jsonwebtoken');
 const comparePassword = require('../utils/comparePassword');
-
+const generateToken = require('../utils/generateToken');
+require('dotenv').config();
 // Sign Up
 const signUp = async (req, res, next) => {
    
@@ -25,7 +26,7 @@ const signUp = async (req, res, next) => {
 
 
 const signIn = async (req, res, next) => {
-    console.log("POST /api/signin called");
+    
     try {
         const {email, password } = req.body;
         if (!email || !password) {
@@ -46,7 +47,7 @@ const signIn = async (req, res, next) => {
         }
         
         //This code generates jwt token
-        const token = jwt.sign({id: user._id }, 'your_jwt_secret_key', { expiresIn: '1h' });
+        const token = generateToken(user);
 
         res.status(200).json({message: "Login successful!", token });
     }

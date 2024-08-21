@@ -1,4 +1,4 @@
-const bcrypt = require('bcryptjs');
+const bcryptjs = require('bcryptjs');
 
 const comparePassword = async (password, hashed)=>{
     return await bcryptjs.compare(password, hashed);

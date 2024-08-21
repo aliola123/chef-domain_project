@@ -1,4 +1,4 @@
-const bcrypt = require('bcryptjs');
+const bcryptjs = require('bcryptjs');
 
 const hashPassword = async (req, res, next) => {
     try {
