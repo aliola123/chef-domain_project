@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types'; 
 import Heading from './Heading';
 import Footer from './Footer';
+import Home from './Home';
+import Menu from './Menu';
+import Contact from './Contact';
 
 const Layout = ({ children }) => {
   return (
@@ -8,6 +11,9 @@ const Layout = ({ children }) => {
       <Heading />
       <main className ='content'>
         {children}
+        <Home />
+        <Menu />
+        <Contact />
       </main>
       <Footer />
     </div>

@@ -1,0 +1,75 @@
+.contact-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .creators-section {
+    margin-bottom: 40px;
+  }
+  
+  .creators-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .creators-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .creators-section li {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+  
+  .feedback-section {
+    margin-top: 20px;
+  }
+  
+  .feedback-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .feedback-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+  
+  .submit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .success-message {
+    color: green;
+    font-size: 1em;
+    margin-top: 10px;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 1em;
+    margin-top: 10px;
+  }

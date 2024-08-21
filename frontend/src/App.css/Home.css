@@ -1,0 +1,31 @@
+.home {
+  position: relative;
+  height: 100vh;
+  background-image: url('../images/chef-background.jpg'); /* Ensure the image path is correct */
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.home-toolbar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.home-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.home-content p {
+  font-size: 1.5rem;
+}

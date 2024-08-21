@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
-import LoginButton from './LoginButton';
 import Cart from './Cart';
+import Navbar from './Navbar'; 
 import '../App.css/Common.css';
-import logo from '/images/chef-domain-logo.jpg';
+import logo from './images/chef-domain-logo.jpg';
+import CredentialsSignInPage from './SignInPage';
 
 const Heading = () => {
   return (
@@ -11,16 +11,10 @@ const Heading = () => {
         <img src={logo} alt="Chef Domain Logo" className="logo" />
         <h1 className="chef-title">CHEF DOMAIN</h1>
       </div>
-      <div className="navbar">
-        <nav className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
-        </nav>
-        <div className="nav-right">
-          <LoginButton />
-          <Cart /> {/* Add the Cart component here */}
-        </div>
+      <Navbar />
+      <div className="nav-right">
+        < CredentialsSignInPage />
+        <Cart />
       </div>
     </header>
   );
