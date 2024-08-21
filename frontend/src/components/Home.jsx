@@ -1,7 +1,7 @@
 
 import { Button } from '@mui/material';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
-import './Home.css'; 
+import '../App.css/Home.css'; 
 
 function Home() {
   return (

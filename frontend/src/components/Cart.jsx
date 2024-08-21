@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import '../App.css/Cart.css'; 
+import '../App.css/Cart.css';
 
 const Cart = ({ products }) => {
   // Initialize cart items with the provided products, including default quantity and total
@@ -13,7 +13,7 @@ const Cart = ({ products }) => {
   // Handle quantity changes
   const handleQuantityChange = (id, quantity) => {
     setCartItems(cartItems.map(item => 
-      item._id === id ? { ...item, quantity: quantity, total: quantity * item.price } : item
+      item._id === id ? { ...item, quantity: Math.max(quantity, 1), total: Math.max(quantity, 1) * item.price } : item
     ));
   };
 
@@ -46,7 +46,7 @@ const Cart = ({ products }) => {
                 <input 
                   type="number" 
                   value={item.quantity} 
-                  onChange={(e) => handleQuantityChange(item._id, parseInt(e.target.value))} 
+                  onChange={(e) => handleQuantityChange(item._id, parseInt(e.target.value, 10))} 
                   min="1" 
                 />
               </td>

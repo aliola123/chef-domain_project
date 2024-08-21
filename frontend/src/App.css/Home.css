@@ -1,31 +1,63 @@
-.home {
-  position: relative;
-  height: 100vh;
-  background-image: url('../images/chef-background.jpg'); /* Ensure the image path is correct */
-  background-size: cover;
-  background-position: center;
-  color: white;
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px 40px;
+  border-bottom: 2px solid #e0e0e0;
 }
 
-.home-toolbar {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+.logo-container {
+  display: flex;
+  align-items: center;
 }
 
-.home-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+.logo {
+  width: 80px;
+  height: auto;
+  margin-right: 20px;
 }
 
-.home-content h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+.chef-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333333;
 }
 
-.home-content p {
-  font-size: 1.5rem;
+/* Navigation Right Section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Navbar Styling */
+.nav-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  font-size: 1.1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+  transition: color 0.3s ease;
 }

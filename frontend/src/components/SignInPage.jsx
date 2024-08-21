@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import '../App.css/Signup.css';
+import '../App.css/Login.css';
 import { AppProvider, SignInPage } from '@toolpad/core';
-import SignUpPage from './Signup';
+import SignUpPage from './SignUpPage';
 
 const providers = [{ id: 'credentials', name: 'Email and Password' }];
 

@@ -1,6 +1,7 @@
 import Cart from './Cart';
 import Navbar from './Navbar'; 
-import '../App.css/Common.css';
+import '../App.css/Heading.css';
+import '../App.css/Cart.css';
 import logo from './images/chef-domain-logo.jpg';
 import CredentialsSignInPage from './SignInPage';
 

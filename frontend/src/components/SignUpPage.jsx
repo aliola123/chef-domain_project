@@ -1,5 +1,6 @@
+// SignUpPage.jsx
 import { useState } from 'react';
-import './App.css/Signup'; 
+import '../App.css/Login.css'; 
 
 export default function SignUpPage() {
   const [formData, setFormData] = useState({
@@ -19,6 +20,7 @@ export default function SignUpPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
+    // Add your form submission logic here
   };
 
   return (
