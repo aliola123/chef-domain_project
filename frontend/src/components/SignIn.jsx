@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import SignUp from './SignUp';
+import { Link } from 'react-router-dom';
 import '../App.css/Login.css';
 
 function SignIn() {
@@ -15,7 +15,7 @@ function SignIn() {
       rememberMe,
     };
     console.log(signInData);
-    // You can use fetch or axios here to send signInData to your backend
+    // Use fetch or axios here to send signInData to your backend
   };
 
   return (
@@ -54,7 +54,7 @@ function SignIn() {
         <button type="submit" className="signin-button">Sign In</button>
       </form>
       <p className="signup-link">
-        Don&apos;t have an account? <a href="/signup"><SignUp /></a>
+        Don&apos;t have an account? <Link to="/signup">Sign Up</Link>
       </p>
     </div>
   );

@@ -36,3 +36,15 @@
   margin-top: 10px;
   color: #ccc;
 }
+
+.about-us-link {
+  color: #ffffff; /* or any color you prefer */
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.about-us-link:hover {
+  text-decoration: underline;
+}

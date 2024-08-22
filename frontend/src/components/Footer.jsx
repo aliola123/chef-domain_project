@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom';
 import '../App.css/Footer.css';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -24,6 +26,11 @@ const Footer = () => {
       <div className="footer-text">
         <p>&copy; {currentYear} Chef Domain. All rights reserved.</p>
       </div>
+
+      <div className="footer-about">
+        <Link to="/about-us" className="about-us-link">About us</Link>
+      </div>
+        
     </footer>
   );
 };
