@@ -1,9 +1,10 @@
-import Cart from './Cart';
+
 import Navbar from './Navbar'; 
 import '../App.css/Heading.css';
-import '../App.css/Cart.css';
 import logo from './images/chef-domain-logo.jpg';
-import CredentialsSignInPage from './SignInPage';
+import SignInPage from './SignIn'
+
+
 
 const Heading = () => {
   return (
@@ -13,9 +14,9 @@ const Heading = () => {
         <h1 className="chef-title">CHEF DOMAIN</h1>
       </div>
       <Navbar />
+      <SignInPage />
       <div className="nav-right">
-        < CredentialsSignInPage />
-        <Cart />
+        
       </div>
     </header>
   );

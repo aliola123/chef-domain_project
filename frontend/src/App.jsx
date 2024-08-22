@@ -3,9 +3,8 @@ import Heading from './components/Heading';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Contact from './components/Contact';
-import Cart from './components/Cart';
-import SignIn from './components/SignInPage';
-import Menu from './components/Menu'; // If you have a Menu component
+import Menu from './components/Menu'; 
+import SignIn from "./components/SignIn";
 
 function App() {
   return (
@@ -15,8 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/signin" element={<SignIn />} />
       </Routes>
       <Footer />
     </Router>

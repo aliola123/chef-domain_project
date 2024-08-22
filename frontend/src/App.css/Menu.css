@@ -1,0 +1,38 @@
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .menu-item {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .menu-item-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .menu-item-details {
+    padding: 10px;
+  }
+  
+  .menu-item-details h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .menu-item-details p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
