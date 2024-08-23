@@ -1,15 +1,16 @@
-import { useState } from 'react';
+
+import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar'; 
 import '../App.css/Heading.css';
 import logo from './images/chef-domain-logo.jpg';
 import { Link } from 'react-router-dom';
-import { FaShoppingCart } from 'react-icons/fa';
+import { FaShoppingCart, FaUser } from 'react-icons/fa';
 
 const Heading = () => {
-  const [showSignIn, setShowSignIn] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleSignInClick = () => {
-    setShowSignIn(!showSignIn);  // Toggle sign-in visibility
+    navigate('/signin'); // Redirect to the sign-in page
   };
 
   return (
@@ -20,17 +21,13 @@ const Heading = () => {
       </div>
       <Navbar />
       <div className="nav-right">
-        <button onClick={handleSignInClick} className="signin-button">
-          Sign In
-        </button>
+        <FaUser 
+          onClick={handleSignInClick} 
+          className="account-icon" 
+          size={24} 
+          style={{ cursor: 'pointer' }}
+        />
       </div>
-      {showSignIn && (
-        <div className="signin-container">
-          <div className="auth-links">
-            {/* Your sign-in form or links */}
-          </div>
-        </div>
-      )}
       <div className="nav-icons">
         <Link to="/cart" className="cart-icon">
           <FaShoppingCart size={24} />

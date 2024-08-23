@@ -82,3 +82,13 @@
     margin-top: 20px;
   }
   
+
+  .account-icon {
+    color: #007bff;
+    margin-right: 20px;
+  }
+  
+  .account-icon:hover {
+    color: #0056b3;
+  }
+  

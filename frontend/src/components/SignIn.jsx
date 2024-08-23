@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaSignInAlt } from 'react-icons/fa'; // Importing the sign-in icon
-import '../App.css/Login.css';
+import '../App.css/Signin.css';
 
 function SignIn() {
   const [email, setEmail] = useState('');
@@ -24,14 +24,14 @@ function SignIn() {
 
   return (
     <div className="signin-container">
-      <h2>Sign In</h2>
+      <h2 className="signin-title">Sign In</h2>
       <form onSubmit={handleSubmit} className="signin-form">
         <div className="form-group">
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Email: </label>
           <input
             type="email"
             id="email"
-            value={email}
+            value= {email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
@@ -53,7 +53,7 @@ function SignIn() {
             checked={rememberMe}
             onChange={() => setRememberMe(!rememberMe)}
           />
-          <label htmlFor="rememberMe">Remember me</label>
+          <label htmlFor="rememberMe"> Remember me</label>
         </div>
         <button
           type="submit"
