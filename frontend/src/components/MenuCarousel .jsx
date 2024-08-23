@@ -2,7 +2,7 @@ import '../App.css/MenuCarousel.css';
 import { Carousel } from 'react-bootstrap';
 
 // Import your images
-import grilledChicken from './images/chef-domain chef.jpg';
+import grilledChicken from './images/Fries.jpg-1724251508173.jpg';
 import vegetableSalad from './images/chef-domain chef.jpg';
 import beefBurger from './images/chef-domain chef.jpg';
 import spaghettiCarbonara from './images/chef-domain chef.jpg';
