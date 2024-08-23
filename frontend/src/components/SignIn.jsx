@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaSignInAlt } from 'react-icons/fa'; // Importing the sign-in icon
 import '../App.css/Login.css';
 
 function SignIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
+  const [showSignUp, setShowSignUp] = useState(false); // State to toggle sign-up link visibility
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,10 +20,12 @@ function SignIn() {
     // Use fetch or axios here to send signInData to your backend
   };
 
+  const toggleSignUp = () => setShowSignUp(!showSignUp);
+
   return (
     <div className="signin-container">
       <h2>Sign In</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="signin-form">
         <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input
@@ -51,11 +55,19 @@ function SignIn() {
           />
           <label htmlFor="rememberMe">Remember me</label>
         </div>
-        <button type="submit" className="signin-button">Sign In</button>
+        <button
+          type="submit"
+          className="signin-button"
+          onClick={toggleSignUp} // Toggle sign-up link visibility
+        >
+          <FaSignInAlt style={{ marginRight: '8px' }} /> Sign In
+        </button>
       </form>
-      <p className="signup-link">
-        Don&apos;t have an account? <Link to="/signup">Sign Up</Link>
-      </p>
+      {showSignUp && ( // Conditional rendering of the sign-up link
+        <p className="signup-link">
+          Don&apos;t have an account? <Link to="/signup">Sign Up</Link>
+        </p>
+      )}
     </div>
   );
 }

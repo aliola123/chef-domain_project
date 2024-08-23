@@ -1,62 +1,48 @@
-/* Container styling for both Sign Up and Sign In pages */
-.auth-container {
+.signin-container {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f5f5f5;
+  border: 1px solid #ccc;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.auth-container h2 {
-  margin-bottom: 20px;
+.signin-form {
+  display: flex;
+  flex-direction: column;
 }
 
-/* Common form group styling */
 .form-group {
   margin-bottom: 15px;
-  text-align: left;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-/* Common button styling */
-.auth-button {
-  width: 100%;
+.signin-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px;
-  background-color: #4CAF50;
-  color: white;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 10px;
 }
 
-.auth-button:hover {
-  background-color: #45a049;
+.signin-button:hover {
+  background-color: #0056b3;
 }
 
-/* Link styling for switching between Sign In and Sign Up pages */
-.auth-link {
-  margin-top: 20px;
+.signup-link {
+  text-align: center;
+  margin-top: 15px;
 }
 
-.auth-link a {
-  color: #4CAF50;
-  text-decoration: none;
+.signup-link a {
+  color: #007bff;
 }
 
-.auth-link a:hover {
+.signup-link a:hover {
   text-decoration: underline;
 }

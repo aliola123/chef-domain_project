@@ -1,9 +1,6 @@
 import { useState } from 'react';
+import { FaMapMarkerAlt, FaWhatsapp, FaHome } from 'react-icons/fa';
 import '../App.css/Contact.css';
-import emmanuelImage from './images/emmanuel.jpg';
-import didiImage from './images/didi.jpg';
-import mosesImage from './images/moses.jpg';
-import chapaImage from './images/chapa.jpg';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -26,38 +23,11 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <h1>Contact Us</h1>
-      <section className="creators-section">
-        <h2>Meet the Creators</h2>
-        <ul>
-          <li className="creator">
-            <img src={emmanuelImage} alt="Emmanuel Edem" className="creator-image" />
-            <div className="creator-info">
-              <strong>Emmanuel Edem</strong> - Frontend Engineer
-              <p>Emmanuel is the lead frontend engineer with a passion for creating intuitive user interfaces. He specializes in React and ensures that the Chef Domain site is both functional and beautiful.</p>
-            </div>
-          </li>
-          <li className="creator">
-            <img src={didiImage} alt="Didi Ifeoma" className="creator-image" />
-            <div className="creator-info">
-              <strong>Didi Ifeoma</strong> - Backend Engineer
-              <p>Didi is responsible for developing the backend architecture of Chef Domain. She works with Node.js and Express.js to ensure the site’s server-side operations are seamless.</p>
-            </div>
-          </li>
-          <li className="creator">
-            <img src={mosesImage} alt="Moses" className="creator-image" />
-            <div className="creator-info">
-              <strong>Moses</strong> - Backend Engineer
-              <p>Moses focuses on database management and API development. He ensures that the Chef Domain database is robust and the APIs are efficient.</p>
-            </div>
-          </li>
-          <li className="creator">
-            <img src={chapaImage} alt="Chapa" className="creator-image" />
-            <div className="creator-info">
-              <strong>Chapa</strong> - Backend Engineer
-              <p>Chapa is in charge of security and performance optimization. He makes sure that Chef Domain is safe, secure, and fast for all users.</p>
-            </div>
-          </li>
-        </ul>
+      <section className="contact-info-section">
+        <h2>Our Contact Information</h2>
+        <p><FaHome /> <strong>Address:</strong> 123 Chef Domain Avenue, Maryland, Lagos, Nigeria</p>
+        <p><FaMapMarkerAlt /> <strong>Location:</strong> Maryland, Lagos</p>
+        <p><FaWhatsapp /> <strong>WhatsApp:</strong> <a href="https://wa.me/2341234567890" target="_blank" rel="noopener noreferrer">+234 123 456 7890</a></p>
       </section>
       <section className="feedback-section">
         <h2>Feedback</h2>

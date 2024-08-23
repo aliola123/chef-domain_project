@@ -1,0 +1,39 @@
+/* Container for the carousel */
+.menu-carousel-container {
+  width: 90%; /* Set the width to 90% of the home page */
+  max-width: 1200px; /* Optional: Set a maximum width if needed */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px;
+  text-align: center;
+}
+
+/* Carousel item content */
+.carousel-item-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Set the height of the carousel */
+  background-color: #a7c4e0; /* Light gray background */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Needed for image positioning */
+}
+
+.carousel-item-image {
+  width: 100%; /* Make image cover the carousel item */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 20px;
+  object-fit: cover; /* Ensure image covers the container without distortion */
+}
+
+.carousel-item-content h3 {
+  position: absolute; /* Position text over the image */
+  bottom: 20px;
+  left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff; /* White text for better contrast */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px;
+  border-radius: 8px;
+}

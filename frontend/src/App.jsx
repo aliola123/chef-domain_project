@@ -6,6 +6,8 @@ import Contact from './components/Contact';
 import Menu from './components/Menu'; 
 import SignIn from "./components/SignIn";
 import AboutUs from "./components/AboutUs";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
