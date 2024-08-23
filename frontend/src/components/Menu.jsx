@@ -1,4 +1,4 @@
-
+import { Outlet, Link } from 'react-router-dom';
 import '../App.css/Menu.css';
 
 const Menu = () => {
@@ -42,6 +42,9 @@ const Menu = () => {
           </div>
         </div>
       ))}
+<Link to="orders">View Orders</Link> 
+<Outlet /> 
+
     </div>
   );
 };

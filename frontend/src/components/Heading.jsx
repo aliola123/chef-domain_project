@@ -2,14 +2,14 @@ import { useState } from 'react';
 import Navbar from './Navbar'; 
 import '../App.css/Heading.css';
 import logo from './images/chef-domain-logo.jpg';
-
-
+import { Link } from 'react-router-dom';
+import { FaShoppingCart } from 'react-icons/fa';
 
 const Heading = () => {
   const [showSignIn, setShowSignIn] = useState(false);
 
   const handleSignInClick = () => {
-    setShowSignIn(!showSignIn);
+    setShowSignIn(!showSignIn);  // Toggle sign-in visibility
   };
 
   return (
@@ -27,13 +27,18 @@ const Heading = () => {
       {showSignIn && (
         <div className="signin-container">
           <div className="auth-links">
-       
-        
-      </div>
+            {/* Your sign-in form or links */}
+          </div>
         </div>
       )}
+      <div className="nav-icons">
+        <Link to="/cart" className="cart-icon">
+          <FaShoppingCart size={24} />
+          <span className="cart-text">Cart</span>
+        </Link>
+      </div>
     </header>
   );
-};
+}
 
 export default Heading;
