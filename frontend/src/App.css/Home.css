@@ -55,3 +55,27 @@
     font-size: 18px;
   }
 }
+
+.menu-carousel-container {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-item-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel-item-content {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.carousel-item-image {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  border-radius: 8px;
+}

@@ -14,7 +14,7 @@ const Menu = () => {
       id: 2,
       name: 'Margherita Pizza',
       price: '$10.99',
-      image: 'https://via.placeholder.com/150', 
+      image: '../images/jollof rice 2.jpg', 
     },
     {
       id: 3,
@@ -28,7 +28,58 @@ const Menu = () => {
       price: '$14.99',
       image: 'https://via.placeholder.com/150', 
     },
+
+    {
+      id: 5,
+      name: 'Margherita Pizza',
+      price: '$10.99',
+      image: '../images/jollof rice 2.jpg', 
+    },
+    {
+      id: 6,
+      name: 'Caesar Salad',
+      price: '$8.99',
+      image: 'https://via.placeholder.com/150', 
+    },
+    {
+      id: 7,
+      name: 'Grilled Chicken',
+      price: '$14.99',
+      image: 'https://via.placeholder.com/150', 
+    },
      
+    {
+      id: 8,
+      name: 'Caesar Salad',
+      price: '$8.99',
+      image: 'https://via.placeholder.com/150', 
+    },
+    {
+      id: 9,
+      name: 'Grilled Chicken',
+      price: '$14.99',
+      image: 'https://via.placeholder.com/150', 
+    },
+    {
+      id: 10,
+      name: 'Grilled Chicken',
+      price: '$14.99',
+      image: 'https://via.placeholder.com/150', 
+    },
+     
+    {
+      id: 11,
+      name: 'Caesar Salad',
+      price: '$8.99',
+      image: 'https://via.placeholder.com/150', 
+    },
+    {
+      id: 12,
+      name: 'Grilled Chicken',
+      price: '$14.99',
+      image: 'https://via.placeholder.com/150', 
+    },
+    
   ];
 
   return (
