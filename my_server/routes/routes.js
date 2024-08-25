@@ -1,7 +1,6 @@
 const express = require('express');
 const productController = require('../controllers/productsController')
 const { signUp, signIn, changePassword } = require('../controllers/authController');
-const hashPassword = require('../middleware/hashPassword');
 const fileUpload = require('../middleware/fileUpload')
 const {signinValidator, signupValidator, passwordValidator} = require('../validator/auth')
 const validate = require('../validator/validate')
@@ -18,7 +17,7 @@ router.delete('/products/:id',isAuth, productController.deleteProduct)// Protect
 router.post('/products/:id/upload',isAuth, fileUpload, productController.upload )// Protected
 
 //AUTH ROUTES
-router.post('/auth/signup',hashPassword,signupValidator, validate, signUp); 
+router.post('/auth/signup',signupValidator, validate, signUp); 
 router.post('/auth/signin',signinValidator, validate, signIn); 
 router.put('/auth/changePassword',isAuth, passwordValidator, validate, changePassword);
 
