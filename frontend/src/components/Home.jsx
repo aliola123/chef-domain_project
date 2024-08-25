@@ -12,8 +12,8 @@ function Home() {
       <div className="home-content">
         <h1>Welcome to Chef Domain</h1>
         <p>Explore our delicious recipes and culinary delights.</p>
-        <MenuCarousel />
       </div>
+      <MenuCarousel />
     </div>
   );
 }

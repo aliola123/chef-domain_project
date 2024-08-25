@@ -1,9 +1,18 @@
-
+import { useEffect } from 'react';
 import '../App.css/About.css';
 import visionImage from './images/chef-domain chef.jpg';
 
-
 const AboutUs = () => {
+  useEffect(() => {
+    
+    document.body.classList.add('about-page');
+
+    
+    return () => {
+      document.body.classList.remove('about-page');
+    };
+  }, []);
+
   return (
     <div className="about-us">
       <h1>About Chef Domain</h1>
@@ -22,7 +31,6 @@ const AboutUs = () => {
         </div>
 
         <div className="mission">
-          
           <h2>Our Mission</h2>
           <p>
             Our mission is to deliver exceptional culinary services that capture
@@ -36,7 +44,6 @@ const AboutUs = () => {
       </section>
 
       <section className="core-values">
-        
         <h2>Core Values</h2>
         <ul>
           <li>
@@ -65,7 +72,6 @@ const AboutUs = () => {
       </section>
 
       <section className="services">
-        
         <h2>Our Services</h2>
         <p>
           Chef Domain offers a wide range of services designed to meet the
@@ -81,7 +87,6 @@ const AboutUs = () => {
       </section>
 
       <section className="cuisine">
-        
         <h2>Exquisite African Delicacies</h2>
         <p>
           Our menu features a rich selection of traditional and modern African
